@@ -11,3 +11,16 @@
 //     lista.innerHTML += item;
 // }
 
+// 2) CICLO WHILE:
+
+let spesa = ["pasta", "riso", "pollo", "pesce", "latte"];
+let lista = document.querySelector(".lista");
+
+let i = 0;
+
+while(i < spesa.length){
+    let item = `<div>${spesa[i]}</div>`;
+    lista.innerHTML += item;
+
+    i++
+}
