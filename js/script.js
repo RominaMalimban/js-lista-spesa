@@ -15,6 +15,7 @@
 
 let spesa = ["pasta", "riso", "pollo", "pesce", "latte"];
 let lista = document.querySelector(".lista");
+let button = document.querySelector("button");
 
 let i = 0;
 
@@ -22,5 +23,13 @@ while(i < spesa.length){
     let item = `<div>${spesa[i]}</div>`;
     lista.innerHTML += item;
 
-    i++
+    i++; 
 }
+
+button.addEventListener("click", 
+    function(){
+        let altro = document.querySelector("#altro").value;
+        spesa.push(altro);
+        lista.innerHTML += `<div>${altro}</div>`;
+    }
+);
